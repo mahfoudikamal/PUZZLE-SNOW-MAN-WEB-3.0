@@ -1,0 +1,719 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix stardog: <tag:stardog:api:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+
+
+<http://www.semanticweb.org/21913337/ontologies/2019/9/snowman-mahfoudi> a owl:Ontology .
+
+:hasEst a owl:ObjectProperty .
+
+:hasNorth a owl:ObjectProperty .
+
+:hasOnIt a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	owl:inverseOf :locatedAt .
+
+:locatedAt a owl:ObjectProperty .
+
+:hasSouth a owl:ObjectProperty .
+
+:hasWest a owl:ObjectProperty .
+
+:CellFree a owl:Class .
+
+:CellFreeEstPlayer a owl:Class ;
+	owl:equivalentClass _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_21 ;
+	rdfs:subClassOf :CellFree .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_22 rdf:first :CellFree ;
+	rdf:rest _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_23 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_23 rdf:first _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_24 ;
+	rdf:rest rdf:nil .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_24 a owl:Restriction ;
+	owl:onProperty :hasEst ;
+	owl:someValuesFrom :CellPlayer .
+
+:CellPlayer a owl:Class ;
+	owl:equivalentClass _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_37 ;
+	rdfs:subClassOf :CellFree .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_21 a owl:Class ;
+	owl:intersectionOf _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_22 .
+
+:CellFreeNorthPlayer a owl:Class ;
+	owl:equivalentClass _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_25 ;
+	rdfs:subClassOf :CellFree .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_26 rdf:first :CellFree ;
+	rdf:rest _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_27 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_27 rdf:first _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_28 ;
+	rdf:rest rdf:nil .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_28 a owl:Restriction ;
+	owl:onProperty :hasSouth ;
+	owl:someValuesFrom :CellPlayer .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_25 a owl:Class ;
+	owl:intersectionOf _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_26 .
+
+:CellFreeSouthPlayer a owl:Class ;
+	owl:equivalentClass _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_29 ;
+	rdfs:subClassOf :CellFree .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_30 rdf:first :CellFree ;
+	rdf:rest _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_31 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_31 rdf:first _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_32 ;
+	rdf:rest rdf:nil .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_32 a owl:Restriction ;
+	owl:onProperty :hasNorth ;
+	owl:someValuesFrom :CellPlayer .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_29 a owl:Class ;
+	owl:intersectionOf _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_30 .
+
+:CellFreeWestPlayer a owl:Class ;
+	owl:equivalentClass _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_33 ;
+	rdfs:subClassOf :CellFree .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_34 rdf:first :CellFree ;
+	rdf:rest _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_35 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_35 rdf:first _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_36 ;
+	rdf:rest rdf:nil .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_36 a owl:Restriction ;
+	owl:onProperty :hasWest ;
+	owl:someValuesFrom :CellPlayer .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_33 a owl:Class ;
+	owl:intersectionOf _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_34 .
+
+:CellNonFree a owl:Class .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_38 rdf:first :CellFree ;
+	rdf:rest _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_39 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_39 rdf:first _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_40 ;
+	rdf:rest rdf:nil .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_40 a owl:Restriction ;
+	owl:onProperty :hasOnIt ;
+	owl:hasValue :player .
+
+:player a :Player , owl:NamedIndividual ;
+	:locatedAt :cell05 .
+
+_:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_37 a owl:Class ;
+	owl:intersectionOf _:bnode_19d1feff_2675_44f8_ae95_50093b9f2b1c_38 .
+
+:Player a owl:Class .
+
+:cell00 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell01 ;
+	:hasNorth :wall ;
+	:hasSouth :cell10 ;
+	:hasWest :wall .
+
+:cell01 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell02 ;
+	:hasNorth :wall ;
+	:hasSouth :cell11 ;
+	:hasWest :cell00 .
+
+:wall a :CellNonFree , owl:NamedIndividual .
+
+:cell10 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell11 ;
+	:hasNorth :cell00 ;
+	:hasSouth :cell20 ;
+	:hasWest :wall .
+
+:cell02 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell03 ;
+	:hasNorth :wall ;
+	:hasSouth :cell12 ;
+	:hasWest :cell01 .
+
+:cell11 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell12 ;
+	:hasNorth :cell01 ;
+	:hasSouth :cell21 ;
+	:hasWest :cell10 .
+
+:cell03 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell04 ;
+	:hasNorth :wall ;
+	:hasSouth :cell13 ;
+	:hasWest :cell02 .
+
+:cell12 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell13 ;
+	:hasNorth :cell02 ;
+	:hasSouth :cell22 ;
+	:hasWest :cell11 .
+
+:cell04 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell05 ;
+	:hasNorth :wall ;
+	:hasSouth :cell14 ;
+	:hasWest :cell03 .
+
+:cell13 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell14 ;
+	:hasNorth :cell03 ;
+	:hasSouth :cell23 ;
+	:hasWest :cell12 .
+
+:cell05 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell06 ;
+	:hasNorth :wall ;
+	:hasSouth :cell15 ;
+	:hasWest :cell04 .
+
+:cell14 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell15 ;
+	:hasNorth :cell04 ;
+	:hasSouth :cell24 ;
+	:hasWest :cell13 .
+
+:cell06 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell07 ;
+	:hasNorth :wall ;
+	:hasSouth :cell16 ;
+	:hasWest :cell05 .
+
+:cell15 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell16 ;
+	:hasNorth :cell05 ;
+	:hasSouth :cell25 ;
+	:hasWest :cell14 .
+
+:cell07 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell08 ;
+	:hasNorth :wall ;
+	:hasSouth :cell17 ;
+	:hasWest :cell06 .
+
+:cell16 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell17 ;
+	:hasNorth :cell06 ;
+	:hasSouth :cell26 ;
+	:hasWest :cell15 .
+
+:cell08 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell09 ;
+	:hasNorth :wall ;
+	:hasSouth :cell18 ;
+	:hasWest :cell07 .
+
+:cell17 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell18 ;
+	:hasNorth :cell07 ;
+	:hasSouth :cell27 ;
+	:hasWest :cell16 .
+
+:cell09 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :wall ;
+	:hasSouth :cell19 ;
+	:hasWest :cell08 .
+
+:cell18 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell19 ;
+	:hasNorth :cell08 ;
+	:hasSouth :cell28 ;
+	:hasWest :cell17 .
+
+:cell19 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell09 ;
+	:hasSouth :cell29 ;
+	:hasWest :cell18 .
+
+:cell20 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell21 ;
+	:hasNorth :cell10 ;
+	:hasSouth :cell30 ;
+	:hasWest :wall .
+
+:cell21 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell22 ;
+	:hasNorth :cell11 ;
+	:hasSouth :cell31 ;
+	:hasWest :cell20 .
+
+:cell22 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell23 ;
+	:hasNorth :cell12 ;
+	:hasSouth :cell32 ;
+	:hasWest :cell21 .
+
+:cell23 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell24 ;
+	:hasNorth :cell13 ;
+	:hasSouth :cell33 ;
+	:hasWest :cell22 .
+
+:cell24 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell25 ;
+	:hasNorth :cell14 ;
+	:hasSouth :cell34 ;
+	:hasWest :cell23 .
+
+:cell25 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell26 ;
+	:hasNorth :cell15 ;
+	:hasSouth :cell35 ;
+	:hasWest :cell24 .
+
+:cell26 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell27 ;
+	:hasNorth :cell16 ;
+	:hasSouth :cell36 ;
+	:hasWest :cell25 .
+
+:cell27 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell28 ;
+	:hasNorth :cell17 ;
+	:hasSouth :cell37 ;
+	:hasWest :cell26 .
+
+:cell28 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell29 ;
+	:hasNorth :cell18 ;
+	:hasSouth :cell38 ;
+	:hasWest :cell27 .
+
+:cell29 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell19 ;
+	:hasSouth :cell39 ;
+	:hasWest :cell28 .
+
+:cell30 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell31 ;
+	:hasNorth :cell20 ;
+	:hasSouth :cell40 ;
+	:hasWest :wall .
+
+:cell31 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell32 ;
+	:hasNorth :cell21 ;
+	:hasSouth :cell41 ;
+	:hasWest :cell30 .
+
+:cell32 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell33 ;
+	:hasNorth :cell22 ;
+	:hasSouth :cell42 ;
+	:hasWest :cell31 .
+
+:cell33 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell34 ;
+	:hasNorth :cell23 ;
+	:hasSouth :cell43 ;
+	:hasWest :cell32 .
+
+:cell34 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell35 ;
+	:hasNorth :cell24 ;
+	:hasSouth :cell44 ;
+	:hasWest :cell33 .
+
+:cell35 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell36 ;
+	:hasNorth :cell25 ;
+	:hasSouth :cell45 ;
+	:hasWest :cell34 .
+
+:cell36 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell37 ;
+	:hasNorth :cell26 ;
+	:hasSouth :cell46 ;
+	:hasWest :cell35 .
+
+:cell37 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell38 ;
+	:hasNorth :cell27 ;
+	:hasSouth :cell47 ;
+	:hasWest :cell36 .
+
+:cell38 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell39 ;
+	:hasNorth :cell28 ;
+	:hasSouth :cell48 ;
+	:hasWest :cell37 .
+
+:cell39 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell29 ;
+	:hasSouth :cell49 ;
+	:hasWest :cell38 .
+
+:cell40 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell41 ;
+	:hasNorth :cell30 ;
+	:hasSouth :cell50 ;
+	:hasWest :wall .
+
+:cell41 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell42 ;
+	:hasNorth :cell31 ;
+	:hasSouth :cell51 ;
+	:hasWest :cell40 .
+
+:cell42 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell43 ;
+	:hasNorth :cell32 ;
+	:hasSouth :cell52 ;
+	:hasWest :cell41 .
+
+:cell43 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell44 ;
+	:hasNorth :cell33 ;
+	:hasSouth :cell53 ;
+	:hasWest :cell42 .
+
+:cell44 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell45 ;
+	:hasNorth :cell34 ;
+	:hasSouth :cell54 ;
+	:hasWest :cell43 .
+
+:cell45 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell46 ;
+	:hasNorth :cell35 ;
+	:hasSouth :cell55 ;
+	:hasWest :cell44 .
+
+:cell46 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell47 ;
+	:hasNorth :cell36 ;
+	:hasSouth :cell56 ;
+	:hasWest :cell45 .
+
+:cell47 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell48 ;
+	:hasNorth :cell37 ;
+	:hasSouth :cell57 ;
+	:hasWest :cell46 .
+
+:cell48 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell49 ;
+	:hasNorth :cell38 ;
+	:hasSouth :cell58 ;
+	:hasWest :cell47 .
+
+:cell49 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell39 ;
+	:hasSouth :cell59 ;
+	:hasWest :cell48 .
+
+:cell50 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell51 ;
+	:hasNorth :cell40 ;
+	:hasSouth :cell60 ;
+	:hasWest :wall .
+
+:cell51 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell52 ;
+	:hasNorth :cell41 ;
+	:hasSouth :cell61 ;
+	:hasWest :cell50 .
+
+:cell52 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell53 ;
+	:hasNorth :cell42 ;
+	:hasSouth :cell62 ;
+	:hasWest :cell51 .
+
+:cell53 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell54 ;
+	:hasNorth :cell43 ;
+	:hasSouth :cell63 ;
+	:hasWest :cell52 .
+
+:cell54 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell55 ;
+	:hasNorth :cell44 ;
+	:hasSouth :cell64 ;
+	:hasWest :cell53 .
+
+:cell55 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell56 ;
+	:hasNorth :cell45 ;
+	:hasSouth :cell65 ;
+	:hasWest :cell54 .
+
+:cell56 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell57 ;
+	:hasNorth :cell46 ;
+	:hasSouth :cell66 ;
+	:hasWest :cell55 .
+
+:cell57 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell58 ;
+	:hasNorth :cell47 ;
+	:hasSouth :cell67 ;
+	:hasWest :cell56 .
+
+:cell58 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell59 ;
+	:hasNorth :cell48 ;
+	:hasSouth :cell68 ;
+	:hasWest :cell57 .
+
+:cell59 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell49 ;
+	:hasSouth :cell69 ;
+	:hasWest :cell58 .
+
+:cell60 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell61 ;
+	:hasNorth :cell50 ;
+	:hasSouth :cell70 ;
+	:hasWest :wall .
+
+:cell61 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell62 ;
+	:hasNorth :cell51 ;
+	:hasSouth :cell71 ;
+	:hasWest :cell60 .
+
+:cell62 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell63 ;
+	:hasNorth :cell52 ;
+	:hasSouth :cell72 ;
+	:hasWest :cell61 .
+
+:cell63 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell64 ;
+	:hasNorth :cell53 ;
+	:hasSouth :cell73 ;
+	:hasWest :cell62 .
+
+:cell64 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell65 ;
+	:hasNorth :cell54 ;
+	:hasSouth :cell74 ;
+	:hasWest :cell63 .
+
+:cell65 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell66 ;
+	:hasNorth :cell55 ;
+	:hasSouth :cell75 ;
+	:hasWest :cell64 .
+
+:cell66 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell67 ;
+	:hasNorth :cell56 ;
+	:hasSouth :cell76 ;
+	:hasWest :cell65 .
+
+:cell67 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell68 ;
+	:hasNorth :cell57 ;
+	:hasSouth :cell77 ;
+	:hasWest :cell66 .
+
+:cell68 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell69 ;
+	:hasNorth :cell58 ;
+	:hasSouth :cell78 ;
+	:hasWest :cell67 .
+
+:cell69 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell59 ;
+	:hasSouth :cell79 ;
+	:hasWest :cell68 .
+
+:cell70 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell71 ;
+	:hasNorth :cell60 ;
+	:hasSouth :cell80 ;
+	:hasWest :wall .
+
+:cell71 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell72 ;
+	:hasNorth :cell61 ;
+	:hasSouth :cell81 ;
+	:hasWest :cell70 .
+
+:cell72 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell73 ;
+	:hasNorth :cell62 ;
+	:hasSouth :cell82 ;
+	:hasWest :cell71 .
+
+:cell73 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell74 ;
+	:hasNorth :cell63 ;
+	:hasSouth :cell83 ;
+	:hasWest :cell72 .
+
+:cell74 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell75 ;
+	:hasNorth :cell64 ;
+	:hasSouth :cell84 ;
+	:hasWest :cell73 .
+
+:cell75 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell76 ;
+	:hasNorth :cell65 ;
+	:hasSouth :cell85 ;
+	:hasWest :cell74 .
+
+:cell76 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell77 ;
+	:hasNorth :cell66 ;
+	:hasSouth :cell86 ;
+	:hasWest :cell75 .
+
+:cell77 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell78 ;
+	:hasNorth :cell67 ;
+	:hasSouth :cell87 ;
+	:hasWest :cell76 .
+
+:cell78 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell79 ;
+	:hasNorth :cell68 ;
+	:hasSouth :cell88 ;
+	:hasWest :cell77 .
+
+:cell79 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell69 ;
+	:hasSouth :cell89 ;
+	:hasWest :cell78 .
+
+:cell80 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell81 ;
+	:hasNorth :cell70 ;
+	:hasSouth :cell90 ;
+	:hasWest :wall .
+
+:cell81 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell82 ;
+	:hasNorth :cell71 ;
+	:hasSouth :cell91 ;
+	:hasWest :cell80 .
+
+:cell82 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell83 ;
+	:hasNorth :cell72 ;
+	:hasSouth :cell92 ;
+	:hasWest :cell81 .
+
+:cell83 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell84 ;
+	:hasNorth :cell73 ;
+	:hasSouth :cell93 ;
+	:hasWest :cell82 .
+
+:cell84 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell85 ;
+	:hasNorth :cell74 ;
+	:hasSouth :cell94 ;
+	:hasWest :cell83 .
+
+:cell85 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell86 ;
+	:hasNorth :cell75 ;
+	:hasSouth :cell95 ;
+	:hasWest :cell84 .
+
+:cell86 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell87 ;
+	:hasNorth :cell76 ;
+	:hasSouth :cell96 ;
+	:hasWest :cell85 .
+
+:cell87 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell88 ;
+	:hasNorth :cell77 ;
+	:hasSouth :cell97 ;
+	:hasWest :cell86 .
+
+:cell88 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell89 ;
+	:hasNorth :cell78 ;
+	:hasSouth :cell98 ;
+	:hasWest :cell87 .
+
+:cell89 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell79 ;
+	:hasSouth :cell99 ;
+	:hasWest :cell88 .
+
+:cell90 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell91 ;
+	:hasNorth :cell80 ;
+	:hasSouth :wall ;
+	:hasWest :wall .
+
+:cell91 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell92 ;
+	:hasNorth :cell81 ;
+	:hasSouth :wall ;
+	:hasWest :cell90 .
+
+:cell92 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell93 ;
+	:hasNorth :cell82 ;
+	:hasSouth :wall ;
+	:hasWest :cell91 .
+
+:cell93 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell94 ;
+	:hasNorth :cell83 ;
+	:hasSouth :wall ;
+	:hasWest :cell92 .
+
+:cell94 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell95 ;
+	:hasNorth :cell84 ;
+	:hasSouth :wall ;
+	:hasWest :cell93 .
+
+:cell95 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell96 ;
+	:hasNorth :cell85 ;
+	:hasSouth :wall ;
+	:hasWest :cell94 .
+
+:cell96 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell97 ;
+	:hasNorth :cell86 ;
+	:hasSouth :wall ;
+	:hasWest :cell95 .
+
+:cell97 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell98 ;
+	:hasNorth :cell87 ;
+	:hasSouth :wall ;
+	:hasWest :cell96 .
+
+:cell98 a :CellFree , owl:NamedIndividual ;
+	:hasEst :cell99 ;
+	:hasNorth :cell88 ;
+	:hasSouth :wall ;
+	:hasWest :cell97 .
+
+:cell99 a :CellFree , owl:NamedIndividual ;
+	:hasEst :wall ;
+	:hasNorth :cell89 ;
+	:hasSouth :wall ;
+	:hasWest :cell98 .
